@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include <QApplication>
 #include "simplethreadone.h"
+#include <QDebug>
 
 int main(int argc, char *argv[])
 {
@@ -9,6 +10,9 @@ int main(int argc, char *argv[])
     w.show();
 
     simplethreadone *SThread = new simplethreadone();
+    
+    qDebug()<<"线程启动!";
+
     SThread->start();
 
 
